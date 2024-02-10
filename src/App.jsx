@@ -6,7 +6,7 @@ import Characters from "./pages/Characters/Characters";
 import Comics from "./pages/Comics/Comics";
 import CharacterCard from "./pages/CharacterCard/CharacterCard";
 import Signup from "./pages/Signup/Signup";
-import Login from "./pages/Login/login";
+import Login from "./pages/Login/Login";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import Favorites from "./pages/Favorites/Favorites";
