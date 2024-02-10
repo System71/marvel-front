@@ -1,13 +1,32 @@
+.characters-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
 .character-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   /* height: 200px; */
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .character-item img {
   width: 100%;
+}
+
+.character-item p {
+  display: none;
+}
+
+.character-item h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-align: center;
 }

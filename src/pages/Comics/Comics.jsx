@@ -16,7 +16,7 @@ const Comics = () => {
       try {
         console.log("chargement des données");
         const response = await axios.get(
-          `http://localhost:3000/comics?page=${currentPage}&search=${search}`
+          `https://site--marvel-backend--nh2bbcwygd2q.code.run/comics?page=${currentPage}&search=${search}`
         );
         console.log("response.data", response.data);
         setData(response.data);

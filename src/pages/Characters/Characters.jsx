@@ -16,7 +16,7 @@ const Characters = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/characters?page=${currentPage}&search=${search}`
+          `https://site--marvel-backend--nh2bbcwygd2q.code.run/characters?page=${currentPage}&search=${search}`
         );
         console.log("response.data", response.data);
         setData(response.data);
@@ -46,29 +46,32 @@ const Characters = () => {
   return isLoading ? (
     <p>En chargement</p>
   ) : (
-    <div className="characters-section">
-      <Searchbar
-        search={search}
-        setSearch={setSearch}
-        setCurrentPage={setCurrentPage}
-        placeholder="Recherche personnage"
-      />
-      <select
-        name="page"
-        id="page"
-        value={currentPage}
-        onChange={(event) => {
-          setCurrentPage(event.target.value);
-        }}
-      >
-        {pagination.map((page, index) => {
-          return (
-            <option value={index + 1} key={"page" + (index + 1)}>
-              {page}
-            </option>
-          );
-        })}
-      </select>
+    <div className="characters-section crawler">
+      <div>
+        {" "}
+        <Searchbar
+          search={search}
+          setSearch={setSearch}
+          setCurrentPage={setCurrentPage}
+          placeholder="Recherche personnage"
+        />
+        <select
+          name="page"
+          id="page"
+          value={currentPage}
+          onChange={(event) => {
+            setCurrentPage(event.target.value);
+          }}
+        >
+          {pagination.map((page, index) => {
+            return (
+              <option value={index + 1} key={"page" + (index + 1)}>
+                {page}
+              </option>
+            );
+          })}
+        </select>
+      </div>
       <div className="charactersList">
         {data.results.map((character) => {
           return (

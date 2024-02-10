@@ -14,7 +14,9 @@ const CharacterCard = () => {
       try {
         console.log("chargement des données");
         console.log("id=", id);
-        const response = await axios.get(`http://localhost:3000/comics/${id}`);
+        const response = await axios.get(
+          `https://site--marvel-backend--nh2bbcwygd2q.code.run/comics/${id}`
+        );
         console.log("response.data", response.data);
         setData(response.data);
         setIsLoading(false);
