@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
+
+header img {
+  height: 100px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}

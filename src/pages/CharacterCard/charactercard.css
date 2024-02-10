@@ -1,0 +1,16 @@
+.character-comics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.character-comic {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+}
+
+.character-comic img {
+  width: 100%;
+}
