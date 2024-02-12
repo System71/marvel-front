@@ -1,5 +1,7 @@
+import "./home.css";
 import { useEffect } from "react";
 import axios from "axios";
+import heroes2 from "../../assets/images/heroes2.png";
 
 const Home = ({ token, setFavoriteCharacters, setFavoriteComics }) => {
   useEffect(() => {
@@ -21,7 +23,11 @@ const Home = ({ token, setFavoriteCharacters, setFavoriteComics }) => {
     fetchFavorites(token);
   }, []);
 
-  return <p>HOME</p>;
+  return (
+    <main>
+      <img src={heroes2} alt="HEROES" />
+    </main>
+  );
 };
 
 export default Home;

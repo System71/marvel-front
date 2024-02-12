@@ -22,7 +22,12 @@ function App() {
 
   return (
     <Router>
-      <Header token={token} setToken={setToken} />
+      <Header
+        token={token}
+        setToken={setToken}
+        setFavoriteCharacters={setFavoriteCharacters}
+        setFavoriteComics={setFavoriteComics}
+      />
       <Routes>
         <Route
           path="/"

@@ -8,5 +8,36 @@
 .favorite-characters,
 .favorite-comics {
   display: flex;
+  justify-content: center;
   gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.favorite-character-item,
+.favorite-comic-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 5px 2px 15px -1px white;
+}
+
+.favorite-character-item img,
+.favorite-comic-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.favorite-character-item h2,
+.favorite-comic-item h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-align: center;
 }

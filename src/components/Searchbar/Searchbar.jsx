@@ -6,6 +6,7 @@ const Searchbar = ({ search, setSearch, setCurrentPage, placeholder }) => {
     <input
       type="text"
       placeholder={placeholder}
+      id="searchbar"
       value={search}
       onChange={(event) => {
         setCurrentPage(1);

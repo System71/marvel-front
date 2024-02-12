@@ -24,7 +24,6 @@ const Signup = ({ setToken }) => {
           avatar: avatar,
         }
       );
-      console.log("response=", response.data);
       setToken(response.data.token);
       Cookies.set("userToken", response.data.token);
 
@@ -35,7 +34,7 @@ const Signup = ({ setToken }) => {
   };
 
   return (
-    <form className="signup" onSubmit={signup}>
+    <form className="signup crawler" onSubmit={signup}>
       <div>
         <label htmlFor="username">Username : </label>
         <input
@@ -77,6 +76,8 @@ const Signup = ({ setToken }) => {
         />
       </div>
       <div>
+        <label htmlFor="avatar">Avatar : </label>
+
         <input
           type="file"
           name="avatar"

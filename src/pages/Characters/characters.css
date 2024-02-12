@@ -11,3 +11,13 @@
   align-items: center;
   gap: 30px;
 }
+
+.characters-section select {
+  height: 28px;
+}
+
+@media (max-width: 950px) {
+  .charactersList {
+    justify-content: center;
+  }
+}

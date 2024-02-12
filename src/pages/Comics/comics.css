@@ -11,3 +11,13 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.comics-section select {
+  height: 28px;
+}
+
+@media (max-width: 950px) {
+  .comicsList {
+    justify-content: center;
+  }
+}

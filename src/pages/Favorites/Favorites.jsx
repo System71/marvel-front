@@ -20,7 +20,7 @@ const Favorites = ({ favoriteCharacters, favoriteComics, token }) => {
         {favoriteComics.map((comic) => {
           return (
             <div className="favorite-comic-item" key={comic._id}>
-              <h2>{comic.name}</h2>
+              <h2>{comic.title}</h2>
               <img src={comic.img} alt="" />
             </div>
           );

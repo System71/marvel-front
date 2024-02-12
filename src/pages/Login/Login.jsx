@@ -30,7 +30,7 @@ const Login = ({ setToken }) => {
   };
 
   return (
-    <form className="signup" onSubmit={login}>
+    <form className="login crawler" onSubmit={login}>
       <div>
         <label htmlFor="email">Email : </label>
         <input

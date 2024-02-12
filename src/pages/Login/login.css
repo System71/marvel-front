@@ -1,5 +1,53 @@
 .login {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  border: 3px white solid;
+  border-radius: 5px;
+  width: 50%;
+  padding: 50px;
+}
+
+.login > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.login input {
+  height: 28px;
+  flex: 1;
+  margin-left: 15px;
+}
+
+.login > button {
+  font-size: 18px;
+  color: white;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 2px white solid;
+  padding: 10px;
+}
+
+@media (max-width: 950px) {
+  .login > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+  .login input {
+    margin: 0;
+    width: 80%;
+  }
 }

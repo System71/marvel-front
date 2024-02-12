@@ -4,12 +4,15 @@
   justify-content: center;
   align-items: center;
   width: 250px;
-  /* height: 200px; */
   border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 5px 2px 15px -1px white;
+  margin-bottom: 5px;
 }
 
 .character-item img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .character-item p {
