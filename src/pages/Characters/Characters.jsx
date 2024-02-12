@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import CharacterItem from "../../components/CharacterItem/CharacterItem";
 import Searchbar from "../../components/Searchbar/Searchbar";
 
-const Characters = () => {
+const Characters = ({ token, favoriteCharacters, setFavoriteCharacters }) => {
   const [data, setData] = useState([]);
-  // const [count, setCount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [pagination, setPagination] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,7 +17,6 @@ const Characters = () => {
         const response = await axios.get(
           `https://site--marvel-backend--nh2bbcwygd2q.code.run/characters?page=${currentPage}&search=${search}`
         );
-        console.log("response.data", response.data);
         setData(response.data);
         // setCount(response.data.count);
 
@@ -32,7 +30,6 @@ const Characters = () => {
           pageValues.push(i);
         }
         setPagination(pageValues);
-        console.log("pagination", pageValues);
         setIsLoading(false);
       } catch (error) {
         console.log(error.response);
@@ -41,14 +38,12 @@ const Characters = () => {
     fetchData();
   }, [currentPage, search]);
 
-  // console.log("pagination=", pagination);
-
   return isLoading ? (
     <p>En chargement</p>
   ) : (
     <div className="characters-section crawler">
+      <h1>CHARACTERS</h1>
       <div>
-        {" "}
         <Searchbar
           search={search}
           setSearch={setSearch}
@@ -87,6 +82,9 @@ const Characters = () => {
               description={character.description}
               id={character._id}
               key={character._id}
+              token={token}
+              favoriteCharacters={favoriteCharacters}
+              setFavoriteCharacters={setFavoriteCharacters}
             />
           );
         })}

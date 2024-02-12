@@ -7,10 +7,8 @@ import Cookies from "js-cookie";
 const Login = ({ setToken }) => {
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [avatar, setAvatar] = useState("");
 
   const login = async (event) => {
     try {
@@ -22,7 +20,6 @@ const Login = ({ setToken }) => {
           password: password,
         }
       );
-      console.log("response=", response.data);
       setToken(response.data.token);
       Cookies.set("userToken", response.data.token);
 

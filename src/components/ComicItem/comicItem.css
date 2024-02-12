@@ -3,11 +3,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   /* height: 200px; */
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .comic-item img {
   width: 100%;
+}
+
+.comic-item p {
+  display: none;
+}
+
+.comic-item h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-align: center;
+}
+
+.favorite-comic {
+  display: none;
+}
+
+#red-heart {
+  color: red;
 }

@@ -21,7 +21,6 @@ const CharacterCard = () => {
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
-        console.log(error.response);
       }
     };
     fetchData();

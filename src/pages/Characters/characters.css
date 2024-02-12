@@ -4,3 +4,10 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.characters-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}

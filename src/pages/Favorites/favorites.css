@@ -1,13 +1,12 @@
-.comics-section {
+.favorites-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
 
-.comicsList {
+.favorite-characters,
+.favorite-comics {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
 }
